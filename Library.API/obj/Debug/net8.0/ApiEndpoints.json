@@ -1,21 +1,21 @@
 [
   {
-    "ContainingType": "Library.API.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "Library.API.Controllers.BookController",
+    "Method": "GetByAuthor",
+    "RelativePath": "by-author/{author}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "itensQuantity",
-        "Type": "System.Int32",
-        "IsRequired": false
+        "Name": "author",
+        "Type": "System.String",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Library.API.WeatherForecast, Library.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Application.Models.GetBooksByAuthorResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -23,23 +23,16 @@
         ],
         "StatusCode": 200
       }
-    ],
-    "EndpointName": "GetWeatherForecast"
+    ]
   },
   {
-    "ContainingType": "Library.API.Controllers.WeatherForecastController",
+    "ContainingType": "Library.API.Controllers.HealthCheck",
     "Method": "Get",
-    "RelativePath": "WeatherForecast/TestHelth",
+    "RelativePath": "HealthCheck/TestHelth",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "nome",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.String",
